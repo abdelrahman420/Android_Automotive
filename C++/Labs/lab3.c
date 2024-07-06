@@ -23,7 +23,7 @@ int* array_2d(int** arr_2d, int arr_size, int* row_sizes, int (*func)(int*, int)
 int main() {
     int row_sizes[] = {2, 3, 5};
     int* arr_2d[3];
-    arr_2d[0] = (int[]){1, 3};
+    arr_2d[0] = (int[]){5, 3};
     arr_2d[1] = (int[]){2,4,6};
     arr_2d[2] = (int[]){2, 3, 5, 7,11};
 

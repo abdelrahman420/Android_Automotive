@@ -4,10 +4,8 @@
 int main() {
     int numofStrings;
     char **strings;
-
     printf("Enter the number of strings you want to enter: ");
     scanf("%d", &numofStrings);
-
     strings = (char**)malloc(numofStrings * sizeof(char*));
 
     char buffer[1024];

@@ -6,10 +6,10 @@ typedef struct {
     int *data;      
     int size;       
     int capacity;  
-} D_Array;
+} Dynamic_Array;
 
 
-void initArray(D_Array *arr, int capacity) 
+void initArray(Dynamic_Array *arr, int capacity) 
 {
     arr->data = (int *)malloc(capacity * sizeof(int));
     arr->size = 0;
@@ -17,7 +17,7 @@ void initArray(D_Array *arr, int capacity)
 }
 
 
-void insertElement(D_Array *arr, int element, int position) 
+void insertElement(Dynamic_Array *arr, int element, int position) 
 {
     if (position < 0 || position > arr->size) {
         printf("Invalid position\n");
@@ -38,7 +38,7 @@ void insertElement(D_Array *arr, int element, int position)
 }
 
 
-void deleteElement(D_Array *arr, int position) 
+void deleteElement(Dynamic_Array *arr, int position) 
 {
     if (position < 0 || position >= arr->size) 
     {
@@ -55,7 +55,7 @@ void deleteElement(D_Array *arr, int position)
 }
 
 
-void printArray(D_Array *arr) {
+void printArray(Dynamic_Array *arr) {
     for (int i = 0; i < arr->size; i++) 
     {
         printf("%d ", arr->data[i]);
@@ -64,7 +64,7 @@ void printArray(D_Array *arr) {
 }
 
 
-void freeArray(D_Array *arr) 
+void freeArray(Dynamic_Array *arr) 
 {
     free(arr->data);
     arr->data = NULL;
@@ -73,7 +73,7 @@ void freeArray(D_Array *arr)
 }
 
 int main() {
-    D_Array arr;
+    Dynamic_Array arr;
     
     initArray(&arr, 4);
     insertElement(&arr, 24, 0);
